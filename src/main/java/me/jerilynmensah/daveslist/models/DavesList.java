@@ -21,6 +21,9 @@ public class DavesList {
     @NotNull
     @Size(min=4,max=20)
     private String cable;
+    @NotNull
+    @Size(min=4,max=20)
+    private String privateBathroom;
 
     public long getId() {
         return id;
@@ -70,8 +73,5 @@ public class DavesList {
         this.privateBathroom = privateBathroom;
     }
 
-    @NotNull
-    @Size(min=4,max=20)
 
-    private String privateBathroom;
 }
