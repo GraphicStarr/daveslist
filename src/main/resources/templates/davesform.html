@@ -30,23 +30,15 @@
                     <form action="#" th:action="@{/index}" th:object="${davesForm}" method="post">
                     <a href="#davesform" class="btn btn-secondary btn-lg">
 
-                        First Name: <input type="text" th:field="*{firstName}"/>
-                        <span th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Please enter a first name</span><br>
-
+                        First Name: <input type="text" th:field="*{firstName}"/><br>
                         Last Name: <input type="text" th:field="*{lastName}"/><br>
-
-
-                        Description: <input type="text" th:field="*{description}"/>
-                        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Please enter a response</span><br>
-                        Rules: <input type="text" th:field="*{rules}"/>
-                        <span th:if="${#fields.hasErrors('rules')}" th:errors="*{rules}">Please enter a response</span><br>
-                        WiFi? Yes or No: <input type="checkbox" th:field="*{wifi}"/>
-                        <span th:if="${#fields.hasErrors('wifi')}" th:errors="*{wifi}">Please enter Yes or No</span><br>
-                        Cable: <input type="text" th:field="*{cable}"/>
-                        <span th:if="${#fields.hasErrors('cable')}" th:errors="*{rules}">Please enter a response</span><br>
-                        Private Bathroom? Yes or No: <input type="checkbox" th:field="*{privateBathroom}"/>
-                        <span th:if="${#fields.hasErrors('privateBathroom')}" th:errors="*{privateBathroom}">Please enter Yes or No</span><br>
-
+                        Description: <input type="text" th:field="*{description}"/><br>
+                        Rules: <input type="text" th:field="*{rules}"/><br>
+                        WiFi? Yes: <input type="checkbox" name="choose" value="Yes" /><br>
+                              No:  <input type="checkbox" name="choose" value="No" /><br>
+                        Cable: <input type="text" th:field="*{cable}"/><br>
+                        Private Bathroom? Yes: <input type="checkbox" name="choose" value="Yes" /><br>
+                                          No:  <input type="checkbox" name="choose" value="No" /><br>
                     </form>
                         <br>
                         <input type="submit" value="Submit"/>
